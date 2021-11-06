@@ -9,13 +9,13 @@
     </h3>
 
     <p *ngIf="product.description">
-        תאור: {{ product.description }}
+        {{ product.description }}
     </p>
-
-    <button (click)="share()">
+    <!--
+  <button (click)="share()">
     Share
   </button>
-
+-->
     <app-product-alerts [product]="product">
     </app-product-alerts>
 
