@@ -1,32 +1,47 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
-import { StationComponent } from './station/station.component';
-//import { StationsComponent } from './stations/stations.component';
+import { AppRoutingModule } from './app-routing.module';
+import { InformationComponent } from './information/information.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+
+const appRoutes: Routes = [
+  { path: 'product-list', component: ProductListComponent },
+  {
+    path: 'information',
+    component: InformationComponent,
+    data: {title: "מידע"}
+  },
+  { path: '',
+    redirectTo: '/',
+    pathMatch: 'full'
+  },
+  { path: '**', component: PageNotFoundComponent }
+];
+
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', 
-        component: ProductListComponent,
-        //component: StationsComponent 
-      },
-    ])
+    RouterModule.forRoot(appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+
+    ),
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
     ProductListComponent,
     ProductAlertsComponent,
-    StationComponent,
   ],
   bootstrap: [
     AppComponent
