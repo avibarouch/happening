@@ -19,9 +19,8 @@ const appRoutes: Routes = [
     component: InformationComponent,
     data: {title: "מידע"}
   },
-  
-  { path: 'stations-list',
-    redirectTo: '',
+  { path: '',
+    redirectTo: 'stations-list',
     pathMatch: 'full'
   },
   { path: '**', component: PageNotFoundComponent }
