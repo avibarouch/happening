@@ -13,14 +13,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 
 const appRoutes: Routes = [
-  { path: 'product-list', component: ProductListComponent },
+  { path: 'stations-list', component: ProductListComponent },
   {
     path: 'information',
     component: InformationComponent,
     data: {title: "מידע"}
   },
-  { path: '',
-    redirectTo: '/',
+  
+  { path: 'stations-list',
+    redirectTo: '',
     pathMatch: 'full'
   },
   { path: '**', component: PageNotFoundComponent }
