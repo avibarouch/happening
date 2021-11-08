@@ -25,7 +25,8 @@ router-outlet+* {
 /* Text */
 
 h1 {
-    font-size: 32px;
+    font-size: 26px;
+    text-align: center;
 }
 
 h2 {
