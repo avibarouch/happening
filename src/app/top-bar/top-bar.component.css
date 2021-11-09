@@ -2,6 +2,11 @@ a {
     border-bottom-style: none;
 }
 
+.fancy-button {
+    background-color: white;
+    color: #065706;
+}
+
 
 /*
 Copyright Google LLC. All Rights Reserved.

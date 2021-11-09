@@ -107,8 +107,8 @@ button:disabled {
 /* Fancy Button */
 
 .fancy-button {
-    background-color: white;
-    color: #065706;
+    background-color: #065706;
+    color: white;
 }
 
 .fancy-button i.material-icons {
@@ -150,6 +150,14 @@ app-top-bar h1 {
     margin-bottom: 8px;
     border-radius: 2px;
     background-color: #EEEEEE;
+}
+
+#emergency {
+    color: red;
+}
+
+#orders {
+    color: blue;
 }
 
 
