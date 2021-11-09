@@ -10,6 +10,7 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { AppRoutingModule } from './app-routing.module';
 import { InformationComponent } from './information/information.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { StationComponent } from './station/station.component';
 
 
 const appRoutes: Routes = [
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
     TopBarComponent,
     ProductListComponent,
     ProductAlertsComponent,
+    StationComponent,
   ],
   bootstrap: [
     AppComponent
