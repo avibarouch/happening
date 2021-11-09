@@ -1,10 +1,10 @@
-export interface Product {
+export interface Station {
   id: number;
   name: string;
   description: string;
 }
 
-export const products = [
+export const STATIONS: Station[] = [
   {
     id: 1,
     name: '1. כניסה ומודיעין',

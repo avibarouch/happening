@@ -1,0 +1,29 @@
+<h2>רשימת תחנות</h2>
+
+<div *ngFor="let station of stations" [class.selected]="station === selectedStation" (click)="onSelect(station)">
+
+    <h3>
+        <a [name]="station.name + ' details'"> {{ station.name }} </a>
+    </h3>
+
+    <p *ngIf="station.description">
+        {{ station.description }}
+    </p>
+</div>
+
+<div *ngIf="selectedStation">
+
+    <h2>פרטי תחנה {{selectedStation.name}}</h2>
+    <div><span>תאור: </span>{{selectedStation.description}}</div>
+    <div>
+        <label for="Station-name">תחנה:</label>
+        <input id="Station-name" [(ngModel)]="selectedStation.name" placeholder="תחנה">
+    </div>
+
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

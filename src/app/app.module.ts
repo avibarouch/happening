@@ -4,8 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
+import { StationListComponent } from './station-list/station-list.component';
+
 import { AppRoutingModule } from './app-routing.module';
 import { InformationComponent } from './information/information.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -13,7 +13,7 @@ import { StationComponent } from './station/station.component';
 
 
 const appRoutes: Routes = [
-  { path: 'stations-list', component: ProductListComponent },
+  { path: 'stations-list', component: StationListComponent },
   {
     path: 'information',
     component: InformationComponent,
@@ -38,11 +38,13 @@ const appRoutes: Routes = [
     ),
     AppRoutingModule
   ],
+  exports: [
+    TopBarComponent,
+  ],
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductListComponent,
-    ProductAlertsComponent,
+    StationListComponent,
     StationComponent,
   ],
   bootstrap: [
