@@ -1,23 +1,24 @@
-<h2>תחנות</h2>
+<h2>רשימת תחנות</h2>
 
-<div *ngFor="let product of products">
+<div *ngFor="let product of products" [class.selected]="product === selectedProduct" (click)="onSelect(product)">
 
     <h3>
-        <a [title]="product.name + ' details'">
-      {{ product.name }}
-    </a>
+        <a [name]="product.name + ' details'"> {{ product.name }} </a>
     </h3>
 
     <p *ngIf="product.description">
         {{ product.description }}
     </p>
-    <!--
-  <button (click)="share()">
-    Share
-  </button>
--->
-    <app-product-alerts [product]="product">
-    </app-product-alerts>
+</div>
+
+<div *ngIf="selectedProduct">
+
+    <h2>פרטי תחנה {{selectedProduct.name}}</h2>
+    <div><span>תאור: </span>{{selectedProduct.description}}</div>
+    <div>
+        <label for="Product-name">תחנה:</label>
+        <input id="Product-name" [(ngModel)]="selectedProduct.name" placeholder="תחנה">
+    </div>
 
 </div>
 
