@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Station, STATIONS } from '../stations';
+import {Station, STATIONS} from "../stations"
+import { StationService } from '../station.service';
+
+
 
 @Component({
   selector: 'app-station-list',
@@ -7,17 +10,24 @@ import { Station, STATIONS } from '../stations';
   styleUrls: ['./station-list.component.css']
 })
 export class StationListComponent implements OnInit{
-  stations = STATIONS;
+  stations:  Station[] = [];
   selectedStation?: Station;
 
-  constructor() { }
+  constructor(private stationService: StationService ) { }
 
   ngOnInit() {
+    this.getStations();
   }
 
   onSelect(station: Station): void {
     this.selectedStation = station;
   }
+  
+  getStations(): void {
+    this.stationService.getStations()
+        .subscribe(stations => this.stations = stations);
+  }
+
 }
 
 
