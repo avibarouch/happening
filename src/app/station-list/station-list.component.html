@@ -3,7 +3,7 @@
 <div *ngFor="let station of stations" [class.selected]="station === selectedStation" (click)="onSelect(station)">
 
     <h3>
-        <a [name]="station.name + ' details'"> {{ station.name }} </a>
+        <a [title]="station.title + ' details'"> {{ station.title }} </a>
     </h3>
 
     <p *ngIf="station.description">
@@ -13,11 +13,11 @@
 
 <div *ngIf="selectedStation">
 
-    <h2>פרטי תחנה {{selectedStation.name}}</h2>
+    <h2>פרטי תחנה {{selectedStation.title}}</h2>
     <div><span>תאור: </span>{{selectedStation.description}}</div>
     <div>
-        <label for="Station-name">תחנה:</label>
-        <input id="Station-name" [(ngModel)]="selectedStation.name" placeholder="תחנה">
+        <label for="Station-title">תחנה:</label>
+        <input id="Station-title" [(ngModel)]="selectedStation.title" placeholder="תחנה">
     </div>
 
 </div>
