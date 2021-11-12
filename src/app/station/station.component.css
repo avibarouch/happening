@@ -1,0 +1,14 @@
+        @media screen and (max-width: 550px) {
+            img.img-max {
+                max-width: 1200px !important;
+                height: auto !important;
+                align-self: center !important;
+                display: block !important;
+            }
+        }
+        
+        .wrapper {
+            max-width: 80%;
+            overflow-x: scroll;
+            white-space: nowrap;
+        }

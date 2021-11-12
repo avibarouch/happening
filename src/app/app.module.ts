@@ -10,10 +10,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { InformationComponent } from './information/information.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { StationComponent } from './station/station.component';
+import { HotMapComponent } from './hot-map/hot-map.component';
 
 
 const appRoutes: Routes = [
   { path: 'stations-list', component: StationListComponent },
+  { path: 'detail/:id', component: StationComponent },
   {
     path: 'information',
     component: InformationComponent,
@@ -46,6 +48,7 @@ const appRoutes: Routes = [
     TopBarComponent,
     StationListComponent,
     StationComponent,
+    HotMapComponent,
   ],
   bootstrap: [
     AppComponent

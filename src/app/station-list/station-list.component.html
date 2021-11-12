@@ -1,26 +1,14 @@
 <h2>רשימת תחנות</h2>
-
-<div *ngFor="let station of stations" [class.selected]="station === selectedStation" (click)="onSelect(station)">
-
-    <h3>
-        <a [title]="station.title + ' details'"> {{ station.title }} </a>
-    </h3>
-
+<div *ngFor="let station of stations">
+    <a routerLink="/detail/{{station.id}}" class="button fancy-button" [title]="'פרטים אודות תחנה '+station.title"> 
+            {{ station.title }} 
+    </a>
     <p *ngIf="station.description">
         {{ station.description }}
     </p>
-</div>
-
-<div *ngIf="selectedStation">
-
-    <h2>פרטי תחנה {{selectedStation.title}}</h2>
-    <div><span>תאור: </span>{{selectedStation.description}}</div>
-    <div>
-        <label for="Station-title">תחנה:</label>
-        <input id="Station-title" [(ngModel)]="selectedStation.title" placeholder="תחנה">
-    </div>
 
 </div>
+
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.

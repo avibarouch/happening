@@ -1,9 +1,18 @@
 <!--Map-->
-<H2>מפת הפעילות</H2>
-<div><img src="src/assets/maps/2021/1.jpg" alt="מפת הפעילות"></div>
+<H2>מפת הפעילות לתחנה {{this.station?.title}}</H2>
+
+<div class="wrapper">
+    <img class="img-max" src="../assets/2021/maps/1.jpg" alt="מפת הפעילות">
+</div>
 
 <!--Text-->
-<div></div>
+<h2>תאור הפעילות בתחנה</h2>
+<div class="station-item">{{this.station?.description}}</div>
 
 <!--Images-->
+<H2>תמונות לתחנה</H2>
 <div></div>
+
+<!--Back to station list-->
+<a class="button fancy-button" href="stations-list">רשימת תחנות</a>
+<a class="button fancy-button" href="hot-map">מפה חמה</a>

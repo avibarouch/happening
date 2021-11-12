@@ -11,7 +11,7 @@ import { StationService } from '../station.service';
 })
 export class StationListComponent implements OnInit{
   stations:  Station[] = [];
-  selectedStation?: Station;
+  //selectedStation?: Station;
 
   constructor(private stationService: StationService ) { }
 
@@ -19,9 +19,9 @@ export class StationListComponent implements OnInit{
     this.getStations();
   }
 
-  onSelect(station: Station): void {
-    this.selectedStation = station;
-  }
+  //onSelect(station: Station): void {
+  //  this.selectedStation = station;
+  //}
   
   getStations(): void {
     this.stationService.getStations()
